@@ -1,5 +1,6 @@
 require "io/console"
-require "process"
+require 'byebug'
+# require "io/process"
 
 KEYMAP = {
   " " => :space,
@@ -34,15 +35,21 @@ MOVES = {
 class Cursor
 
   attr_reader :cursor_pos, :board
+  attr_accessor :select
 
   def initialize(cursor_pos, board)
     @cursor_pos = cursor_pos
     @board = board
+    @select = true #assuming human player always goes first
   end
 
   def get_input
     key = KEYMAP[read_char]
     handle_key(key)
+  end
+
+  def selected
+    true
   end
 
   private
@@ -78,16 +85,26 @@ class Cursor
 
   def handle_key(key)
     case key
-    when :return || :space
+    when :return, :space
+      selected = false
       @cursor_pos
-    when :left || :right || :down || :up
-      update(MOVES[key])
+    when :left, :right, :down, :up
+      update_pos(MOVES[key])
       nil
     when :ctrl_c
       Process.exit(0)
+    end
   end
 
   def update_pos(diff)
-    @cursor_pos
+    # debugger
+    row1, col1 = @cursor_pos
+    row2, col2 = diff
+
+    next_pos = [row1+row2, col1+col2]
+    if next_pos.all? {|x| x.between?(0,7)}
+      @cursor_pos = next_pos
+    end
   end
+
 end

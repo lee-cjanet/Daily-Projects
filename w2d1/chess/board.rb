@@ -1,12 +1,15 @@
 # require_relative 'pieces'
 require 'colorize'
+require_relative 'pieces'
+
 
 class Board
   attr_accessor :grid, :pieces
 
   def initialize
-    @grid = Array.new(8){Array.new(8){"-"}}
+    @grid = Array.new(8){Array.new(8, NullPiece.instance)}
   end
+
 
   def pieces
     @grid[0][0] = "R"
@@ -30,9 +33,6 @@ class Board
     if self[end_pos] == "-"
       self[start_pos], self[end_pos] = self[end_pos], self[start_pos]
     end
-  end
-
-  def render
   end
 
 

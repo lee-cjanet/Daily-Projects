@@ -1,9 +1,15 @@
 class Piece
 
-  def initialize
+  def initialize(color=nil, board, pos)
+    @color = color
+    @board = board
+    @pos = pos
   end
 
   def to_s()
+  end
+
+  def moves #returns an array of places a Piece can move to
   end
 
   def empty?()
