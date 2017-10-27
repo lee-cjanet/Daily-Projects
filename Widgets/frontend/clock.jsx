@@ -38,7 +38,7 @@ class Clock extends React.Component {
     second = (second < 10) ? `0${second}` : second;
 
     return(
-      <div>
+      <div className='clock'>
         <h1>Beginning of something beautiful</h1>
         <p>{hour} : {minute} : {second} {midday}</p>
       </div>
