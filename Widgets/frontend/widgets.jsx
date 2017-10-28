@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Clock from './clock';
-import Tabs from './tabs';
-import Weather from './weather';
+import Tabs from './tabs/tabs';
+import Weather from './weather/weather';
 
 const tabsContent = [
   {title: 'one', content: "hello world"},
