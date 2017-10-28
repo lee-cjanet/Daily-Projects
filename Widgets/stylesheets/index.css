@@ -26,6 +26,7 @@ time, mark, audio, video {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -33,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.5em;
 }
 ol, ul {
 	list-style: none;
@@ -63,5 +64,49 @@ table {
 /*CLOCK*/
 
 .clock {
-	
+	flex-direction: column;
+	width: 50vw;
+	height: 15vh;
+	background-color: orange
+}
+
+/*TABS*/
+
+.tabs {
+	flex-direction: column;
+	border-left: 2px black;
+	border-right: 2px black;
+	border-bottom: 2px black;
+	width: 200px;
+	height: 300px;
+}
+
+.tabs > article {
+	background-color: yellow;
+	border: 2px solid black;
+	width: 100%;
+	height: 100%;
+	padding: 3px;
+}
+
+.tabs-header {
+	flex-direction: row;
+	width: 100%;
+}
+
+.tabs-header > li {
+	flex-grow: 1;
+	padding: .3em .5em .3em;
+	border-radius: 10px 10px 0px 0px;
+	border: 2px solid black;
+	background-color: yellow;
+}
+.tabs-header:hover {
+	cursor: pointer;
+}
+
+.tabs-header .active {
+	font-weight: 600;
+	border-bottom-color: none;
+	color: grey;
 }
