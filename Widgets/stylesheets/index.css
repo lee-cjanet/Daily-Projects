@@ -110,3 +110,23 @@ table {
 	border-bottom-color: none;
 	color: grey;
 }
+
+
+/*WEATHER*/
+
+.weather {
+	width: 50vw;
+	height: 15vh;
+	background-color: green
+}
+
+/*AUTOCOMPLETE*/
+
+.autocomplete > ul {
+	background-color: blue;
+	width: 30vw;
+	height: 300px;
+	flex-direction: column;
+	flex-wrap: wrap;
+	overflow-y: scroll;
+}

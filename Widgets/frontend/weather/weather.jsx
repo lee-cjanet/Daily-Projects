@@ -58,7 +58,7 @@ export default class Weather extends React.Component {
 
   render() {
     let { kelvin, city, weather } = this.state;
-    let temp = Math.floor(100*(kelvin - 273.15))/100;
+    let temp = (kelvin === "") ? "" : `${Math.floor(100*(kelvin - 273.15))/100}°C`;
 
     return(
       <div className='weather'>
@@ -66,7 +66,7 @@ export default class Weather extends React.Component {
         <span id='temperature'>
           {city} <br/>
           {weather} <br/>
-          {temp}°C
+          {temp}
         </span>
       </div>
     );
