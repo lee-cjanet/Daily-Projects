@@ -73,8 +73,10 @@ class Root extends React.Component {
       <div>
         <Clock />
         <Weather />
-        <Tabs tabsContent={tabsContent} />
-        <Autocomplete list={countries} />
+        <div className="interactive">
+          <Tabs tabsContent={tabsContent} />
+          <Autocomplete list={countries} />
+        </div>
       </div>
     );
   }

@@ -24,7 +24,7 @@ time, mark, audio, video {
 	font-family: 'Fascinate Inline', cursive;
 	vertical-align: baseline;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
 }
@@ -57,8 +57,7 @@ table {
 
 #root {
 	width: 100vw;
-	height: 100vh;
-	background-color: red
+	height: 100vh
 }
 
 /*CLOCK*/
@@ -67,7 +66,25 @@ table {
 	flex-direction: column;
 	width: 50vw;
 	height: 15vh;
-	background-color: orange
+	background-color: orange;
+	border: 2px solid #f2f2f2;
+	border-radius: 2px;
+	margin: 2em;
+}
+
+/*WEATHER*/
+
+.weather {
+	width: 50vw;
+	height: 15vh;
+	border: 2px solid #f2f2f2;
+	border-radius: 2px;
+	margin: 2em;
+	background-color: red
+}
+
+.interactive {
+	flex-direction: row;
 }
 
 /*TABS*/
@@ -79,6 +96,9 @@ table {
 	border-bottom: 2px black;
 	width: 200px;
 	height: 300px;
+	border: 2px solid #f2f2f2;
+	border-radius: 2px;
+	margin: 2em;
 }
 
 .tabs > article {
@@ -111,15 +131,6 @@ table {
 	color: grey;
 }
 
-
-/*WEATHER*/
-
-.weather {
-	width: 50vw;
-	height: 15vh;
-	background-color: green
-}
-
 /*AUTOCOMPLETE*/
 
 .autocomplete > ul {
@@ -129,4 +140,11 @@ table {
 	flex-direction: column;
 	flex-wrap: wrap;
 	overflow-y: scroll;
+	border: 2px solid #f2f2f2;
+	border-radius: 2px;
+	margin: 2em;
+}
+
+.autocomplete > li:hover {
+	cursor: pointer;
 }

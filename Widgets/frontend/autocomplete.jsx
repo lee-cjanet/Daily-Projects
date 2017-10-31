@@ -11,12 +11,19 @@ export default class Autocomplete extends React.Component {
     this.onUpdateInput = this.onUpdateInput.bind(this);
     this.displayList = this.displayList.bind(this);
     this.matchedList = this.matchedList.bind(this);
+    this.selectName = this.selectName.bind(this);
   }
 
   onUpdateInput(event) {
+    event.preventDefault();
     this.setState({
       inputVal: event.currentTarget.value
     });
+  }
+
+  selectName(event) {
+    let name = event.currentTarget.innerText;
+    this.setState({inputVal: name})
   }
 
   matchedList() {
@@ -38,7 +45,9 @@ export default class Autocomplete extends React.Component {
     let list = this.matchedList().map((word, idx) => {
       return(
         <div>
-        <li key={idx}>
+        <li
+          key={idx}
+          onClick={this.selectName}>
           {word}
         </li>
         <br/>
