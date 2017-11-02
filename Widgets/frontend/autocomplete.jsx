@@ -23,7 +23,7 @@ export default class Autocomplete extends React.Component {
 
   selectName(event) {
     let name = event.currentTarget.innerText;
-    this.setState({inputVal: name})
+    this.setState({inputVal: name});
   }
 
   matchedList() {
