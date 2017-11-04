@@ -29,6 +29,7 @@ export default class Weather extends React.Component {
   }
 
   fetchWeather(lat, lon) {
+    console.log("hi")
     let that = this;
     let request = new XMLHttpRequest();
 
