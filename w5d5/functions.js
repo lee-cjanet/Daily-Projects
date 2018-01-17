@@ -1,3 +1,8 @@
+// ====================================================
+// TIMING IS EVERYTHING
+// ====================================================
+
+
 class Clock {
   constructor() {
     // 1. Create a Date object.
@@ -14,13 +19,19 @@ class Clock {
     this.addSeconds = this.addSeconds.bind(this);
     this.addMinute = this.addMinute.bind(this);
     this.addHour = this.addHour.bind(this);
+    
+    console.log(this._tick());
   }
 
   printTime() {
     // Format the time in HH:MM:SS
     // Use console.log to print it.
+    let mm = this.mm < 10 ? `0${this.mm}` : this.mm;
+    let ss = this.ss < 10 ? `0${this.ss}` : this.ss;
+    let hr = this.hr > 12 ? this.hr - 12 : this.hr;
+    let am = this.hr > 11 ? 'pm' : 'am';
     
-    console.log(`${this.hr}:${this.mm}:${this.ss}`)
+    console.log(`${hr}:${mm}:${ss}${am}`)
   }
 
   _tick() {
@@ -50,13 +61,13 @@ class Clock {
   
   addHour() {
     this.hr += 1
-    
-    if (this.hr > 12) {
-      this.hr = 1;
-    }
   }
 }
 
 const clock = new Clock();
 
-clock._tick()
+
+
+// ====================================================
+// ADD NUMBERS
+// ====================================================
