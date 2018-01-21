@@ -42,7 +42,7 @@ class Clock {
   }
   
   addSeconds() {
-    this.ss += 1
+    this.ss += 1;
     
     if (this.ss > 59) {
       this.ss = 0;
@@ -51,7 +51,7 @@ class Clock {
   }
   
   addMinute() {
-    this.mm += 1
+    this.mm += 1;
     
     if (this.mm > 59) {
       this.mm = 0;
@@ -60,7 +60,7 @@ class Clock {
   }
   
   addHour() {
-    this.hr += 1
+    this.hr += 1;
   }
 }
 
@@ -71,3 +71,8 @@ const clock = new Clock();
 // ====================================================
 // ADD NUMBERS
 // ====================================================
+function addNumbers() {
+  let sum = 0;
+}
+
+addNumbers(0, 3, sum => console.log(`Total Sum: ${sum}`));
