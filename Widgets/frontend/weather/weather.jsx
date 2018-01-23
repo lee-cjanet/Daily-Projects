@@ -6,7 +6,7 @@ export default class Weather extends React.Component {
     super();
 
     this.state = {
-      city: "",
+      city: "loading...",
       weather: "",
       kelvin: ""
     };
@@ -29,7 +29,6 @@ export default class Weather extends React.Component {
   }
 
   fetchWeather(lat, lon) {
-    console.log("hi")
     let that = this;
     let request = new XMLHttpRequest();
 
@@ -42,7 +41,6 @@ export default class Weather extends React.Component {
                 weather: response.weather[0].description,
                 kelvin: response.main.temp
               });
-              //  document.getElementById("temperature").innerHTML = response;
            }
            else if (request.status == 400) {
               alert('There was an error 400');
@@ -63,7 +61,6 @@ export default class Weather extends React.Component {
 
     return(
       <div className='weather'>
-        <h1> Weather </h1>
         <span id='temperature'>
           {city} <br/>
           {weather} <br/>

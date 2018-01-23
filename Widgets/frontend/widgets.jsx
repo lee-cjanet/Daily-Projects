@@ -71,11 +71,19 @@ class Root extends React.Component {
   render() {
     return(
       <div>
+      <h2>Clock</h2>
         <Clock />
+        <h2>Weather</h2>
         <Weather />
         <div className="interactive">
-          <Tabs tabsContent={tabsContent} />
-          <Autocomplete list={countries} />
+          <section>
+            <h2>Tabs</h2>
+            <Tabs tabsContent={tabsContent} />
+          </section>
+         <section>
+            <h2>Autocomplete</h2>
+            <Autocomplete list={countries} />
+         </section>
         </div>
       </div>
     );

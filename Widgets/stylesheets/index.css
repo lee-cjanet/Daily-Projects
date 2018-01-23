@@ -16,13 +16,14 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
+	margin: 0 0 0 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
-	font-family: 'Fascinate Inline', cursive;
+	font: sans-serif;
+	font-family: 'Muli', sans-serif;
 	vertical-align: baseline;
+	letter-spacing: .1em;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -52,6 +53,16 @@ table {
 	border-spacing: 0;
 }
 
+h2 {
+	margin: 1em .3em .3em .3em;
+	font-size: 1.7em;
+	font-family: 'Muli', sans-serif;
+}
+
+section {
+	margin: 25px;
+}
+
 
 /*ROOT*/
 
@@ -62,25 +73,46 @@ table {
 
 /*CLOCK*/
 
-.clock {
-	flex-direction: column;
-	width: 50vw;
-	height: 15vh;
-	background-color: orange;
-	border: 2px solid #f2f2f2;
-	border-radius: 2px;
-	margin: 2em;
+.clock{
+  color: white;
+  font-family: Orbitron;
+  width: 550px;
+  height: 94px;
+	font-size: 20px;
+  border: 2px solid black;
+  margin: 0px 20px 20px 20px;
+  padding: 10px;
+  background-color: orange;
+  background-image: url(https://hd.unsplash.com/photo-1445109673451-c511bb51bd17);
+  background-size: cover;
+  background-position-y: 20%;
+}
+
+.clock p{
+  margin: 12px;
+  display: flex;
+  justify-content: space-between;
+	flex-direction: row;
 }
 
 /*WEATHER*/
 
-.weather {
-	width: 50vw;
-	height: 15vh;
-	border: 2px solid #f2f2f2;
-	border-radius: 2px;
-	margin: 2em;
-	background-color: red
+.weather{
+  font-size: 20px;
+  width: 550px;
+  height: 94px;
+  border: 2px solid black;
+  margin: 0 20px 20px 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: lightgreen;
+  background-image: url(https://hd.unsplash.com/photo-1429479196389-7d1afeaa2d21);
+  background-size: cover;
+  background-position-y: 20%;
+}
+
+.weather p{
+  margin: 8px;
 }
 
 .interactive {
@@ -88,26 +120,6 @@ table {
 }
 
 /*TABS*/
-
-.tabs {
-	flex-direction: column;
-	border-left: 2px black;
-	border-right: 2px black;
-	border-bottom: 2px black;
-	width: 200px;
-	height: 300px;
-	border: 2px solid #f2f2f2;
-	border-radius: 2px;
-	margin: 2em;
-}
-
-.tabs > article {
-	background-color: yellow;
-	border: 2px solid black;
-	width: 100%;
-	height: 100%;
-	padding: 3px;
-}
 
 .tabs-header {
 	flex-direction: row;
@@ -131,20 +143,132 @@ table {
 	color: grey;
 }
 
+.tabs-header{
+  width: 200px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+	flex-direction: row;
+}
+
+.tabs-header > li{
+  width: 65px;
+  border-top: 2px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 2px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 4px;
+  text-align: center;
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+.tabs-header > li:first-child{
+  border-left: 2px solid black;
+}
+
+.tabs-header > li:last-child{
+  border-right: 2px solid black;
+}
+
+.tabs-header > li:hover{
+  background-color: black;
+  color: white;
+}
+
+.tabs-header .active{
+  height: 30px;
+	font-weight: bold;
+}
+
+.tabs > article{
+  font-weight: bold;
+  color: white;
+  height: 192px;
+	width: 196px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  background-image: url(https://hd.unsplash.com/photo-1445112098124-3e76dd67983c);
+  background-size: cover;
+}
+
+body{
+  display: flex;
+  justify-content: space-around;
+}
+
+.interactive{
+  display: flex;
+  justify-content: space-around;
+}
+
 /*AUTOCOMPLETE*/
 
-.autocomplete > ul {
-	background-color: blue;
-	width: 30vw;
-	height: 300px;
-	flex-direction: column;
+.autocomplete  {
+	color: white;
+  width: 191px;
+  height: 200px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: violet;
+  background-image: url(https://hd.unsplash.com/6/blurred_lines.jpeg);
+  background-size: cover;
+  background-position: center;
 	flex-wrap: wrap;
 	overflow-y: scroll;
-	border: 2px solid #f2f2f2;
-	border-radius: 2px;
-	margin: 2em;
+	flex-direction: column;
+}
+
+.autocomplete > ul {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before:1.7em;
+	-webkit-margin-after:0em;
+	-webkit-margin-start:0px;
+	-webkit-margin-end:0px;
+	-webkit-padding-start: 0px;
 }
 
 .autocomplete > li:hover {
 	cursor: pointer;
+}
+
+.autocomplete > input{
+  margin: 8px 0px 5px 0px;
+  border: 1px solid black;
+	position: fixed;
+}
+
+.autocomplete li{
+  cursor: pointer;
+  list-style-type: square;
+}
+
+.autocomplete-enter {
+  opacity: 0.01;
+  transform: translateY(500%);
+}
+
+.autocomplete-enter.autocomplete-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 700ms ease-in, transform 700ms ease-in;
+}
+
+.autocomplete-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.autocomplete-leave.autocomplete-leave-active {
+  opacity: 0.01;
+  transform: translateY(500%);
+  transition: opacity 700ms ease-in, transform 700ms ease-in;
 }

@@ -60,7 +60,6 @@ export default class Autocomplete extends React.Component {
   render() {
     return(
       <div className="autocomplete">
-        <h1>Autocomplete</h1>
         <input
           onChange={this.onUpdateInput}
           value={this.state.inputVal}
