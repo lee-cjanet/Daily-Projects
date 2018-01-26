@@ -9,7 +9,7 @@ class Clock {
     // 2. Store the hours, minutes, and seconds.
     // 3. Call printTime.
     // 4. Schedule the tick at 1 second intervals. 
-    const date = new Date()
+    const date = new Date();
     this.ss = date.getSeconds();
     this.mm = date.getMinutes();
     this.hr = date.getHours();
@@ -31,7 +31,7 @@ class Clock {
     let hr = this.hr > 12 ? this.hr - 12 : this.hr;
     let am = this.hr > 11 ? 'pm' : 'am';
     
-    console.log(`${hr}:${mm}:${ss}${am}`)
+    console.log(`${hr}:${mm}:${ss}${am}`);
   }
 
   _tick() {
@@ -66,13 +66,3 @@ class Clock {
 
 const clock = new Clock();
 
-
-
-// ====================================================
-// ADD NUMBERS
-// ====================================================
-function addNumbers() {
-  let sum = 0;
-}
-
-addNumbers(0, 3, sum => console.log(`Total Sum: ${sum}`));
