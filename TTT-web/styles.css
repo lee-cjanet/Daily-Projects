@@ -72,20 +72,26 @@ table {
 
 .board {
   z-index: 9;
-  height: 350px;
-  width: 350px;
+  height: 345px;
+  width: 345px;
   border: 2px solid blue;
 }
 
 tr {
-  flex-grow: 1;
+	height: 115px;
+	width: 115px;
   border: 2px solid red;
 }
 
 td {
-  flex-grow: 1;
+	height: 115px;
+	width: 115px;
   border: 2px solid black;
   cursor: pointer;
+}
+
+.active {
+	background-color: red;
 }
 
 
