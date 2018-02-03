@@ -66,15 +66,16 @@ table {
 
 /* BOARD */
 
-/* .game {
-  flex-direction: row;
-} */
-
 .board {
   z-index: 9;
   height: 345px;
   width: 345px;
   border: 2px solid blue;
+	font-size: 20px;
+}
+
+table {
+	font-family:  "Comic Sans MS", cursive, sans-serif;
 }
 
 tr {
@@ -88,17 +89,15 @@ td {
 	width: 115px;
   border: 2px solid black;
   cursor: pointer;
-}
-
-.active {
-	background-color: red;
+	vertical-align:  middle;
+	text-align: center;
 }
 
 
 /* =============================== */
 
 .end-game {
-  /* display: none; */
+  display: none;
   position: absolute;
   z-index: 10;
   height: 150px;
