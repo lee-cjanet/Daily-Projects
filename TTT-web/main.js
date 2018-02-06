@@ -15,6 +15,27 @@ const winCombos = [
 let wonX = 0;
 let wonO = 0;
 
+// function getElById(id, parent) {
+// 	parent = parent || document.body;
+//
+// 	// bfs each children
+// 	let queue = [parent];
+// 	while (queue.length > 0) {
+// 		let visit = queue.shift();
+// 		if (visit.id === id) {
+// 			return visit;
+// 		} else {
+// 			visit.childNodes.forEach(child => {
+// 				queue.push(child);
+// 			});
+// 		}
+// 	}
+//
+// 	return null;
+// }
+
+// console.log(getElById('2'))
+
 const cells = [...document.querySelectorAll('.cell')];
 startGame();
 
